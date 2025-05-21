@@ -6,8 +6,7 @@
 
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 0 3% 3% 3%;
 
     box-shadow: var(--box-shadow);
     background-color: var(--color-surface);
@@ -24,28 +23,72 @@
     gap: 5%;
 }
 
-.input-field {
-    input[type="text"], input[type="email"] {
-        width: 100%;
-        border: 1px solid var(--color-border);
-        border-radius: 4px;
-        background-color: var(--color-surface-secondary);
-        color: var(--color-text-secondary);
-        height: 2.5rem;
-        padding-left: 10px;
-        font-size: 1rem;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 0.25rem;
-        padding-left: 5px;
-    }
-
+.input-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    height: 2.5rem;
+    padding-left: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--color-accent-primary);
+    outline: none;
+}
+
+.input-label {
+    position: absolute;
+    left: 10px;
+    top: 0.75rem;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    background-color: var(--color-surface);
+    padding: 0 4px;
+    pointer-events: none;
+    transform-origin: left top;
+    transition:
+            transform 0.2s ease,
+            top 0.2s ease,
+            font-size 0.2s ease,
+            color 0.2s ease;
+}
+
+/* Hide label when input is empty and not focused */
+.input-field:placeholder-shown + .input-label {
+    transform: none;
+    font-size: 1rem;
+    top: 0.75rem;
+}
+
+/* Float the label on focus or when input has content */
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -0.5rem;
+    font-size: 0.75rem;
+    transform: translateY(-25%);
+    color: var(--color-accent-primary);
+}
+
+.input-field:focus::placeholder {
+    opacity: 0;
+    transition: none;
+}
+
+.input-field::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s;
 }
 
 .input-full {
@@ -54,4 +97,69 @@
 
 .input-small {
     width: calc(50% - (2.5% + 5px));
+}
+
+.schienenabschnitt-liste {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.schienenabschnitt-table {
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.table-header th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-surface);
+}
+
+.table-input {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.05); /* very light background */
+    border: 1px solid rgba(255, 255, 255, 0.1);   /* subtle border */
+    color: var(--color-text-primary);
+    border-radius: 4px;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.table-input:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.table-input:focus {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: var(--color-accent-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.4);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.add-schienenabschnitt-button {
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    background-color: var(--color-surface);
+    cursor: pointer;
+}
+
+.save-button {
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-success);
+    cursor: pointer;
 }
