@@ -5,7 +5,6 @@ function Dashboard() {
         <div className="dashboard">
             <div className="dashboard-content">
                 <h2>Dashboard</h2>
-
                 <section className="dashboard-cards">
                     <div className="dashboard-card">
                         <h3>Kunden</h3>
@@ -22,7 +21,12 @@ function Dashboard() {
                 </section>
 
                 <section className="dashboard-table">
-                    <h3>Einträge</h3>
+                    <div className="dashboard-table-header">
+                        <h3>Einträge</h3>
+                        <div className="search-bar">
+                            <input type="text" placeholder="Suchen..." className="search-input"/>
+                        </div>
+                    </div>
                     <div className="table-wrapper">
                         <table className="dashboard-table-list">
                             <thead>
@@ -32,7 +36,7 @@ function Dashboard() {
                                 <th>Telefon</th>
                                 <th>Adresse</th>
                                 <th>Schienennetz</th>
-                                <span>+</span>
+                                <button className="table-action-button">+</button>
                             </tr>
                             </thead>
                             <tbody>
@@ -42,7 +46,7 @@ function Dashboard() {
                                 <td>+431105523</td>
                                 <td>Müllergasse 27, 1040 Wien</td>
                                 <td>17 Abschnitte</td>
-                                <span>{'>'}</span>
+                                <button className="table-action-button">{'>'}</button>
                             </tr>
                             <tr>
                                 <td>RailNet AG</td>
@@ -50,7 +54,7 @@ function Dashboard() {
                                 <td>+436811014242</td>
                                 <td>Korneuburgerstraße 47/14, 1230 Wien</td>
                                 <td>100 Abschnitte</td>
-                                <span>{'>'}</span>
+                                <button className="table-action-button">{'>'}</button>
                             </tr>
                             </tbody>
                         </table>

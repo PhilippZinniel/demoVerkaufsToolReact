@@ -24,6 +24,7 @@
 .dashboard-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -97,4 +98,58 @@
 
 .dashboard-table-list td {
     color: #ddd;
+}
+
+.dashboard-table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.table-action-button {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: none;
+    cursor: pointer;
+}
+
+.table-action-button:hover {
+    box-shadow: 0 0 6px rgba(0, 150, 255, 0.5);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #2F2F2F;
+    border-radius: var(--border-radius);
+    padding: 6px 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 0 0 1px #444;
+    transition: box-shadow 0.2s ease;
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 0 6px rgba(0, 150, 255, 0.5);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px;
+}
+
+.search-input::placeholder {
+    color: #aaa;
 }
