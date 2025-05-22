@@ -56,6 +56,70 @@ function Dashboard() {
                                 <td>100 Abschnitte</td>
                                 <button className="table-action-button">{'>'}</button>
                             </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
+                            <tr>
+                                <td>RailNet AG</td>
+                                <td>info@railnet.at</td>
+                                <td>+436811014242</td>
+                                <td>Korneuburgerstraße 47/14, 1230 Wien</td>
+                                <td>100 Abschnitte</td>
+                                <button className="table-action-button">{'>'}</button>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
