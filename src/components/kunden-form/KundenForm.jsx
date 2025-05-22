@@ -48,21 +48,23 @@ function KundenForm() {
 
     return (
         <div className="kunden-eingabe">
-            <h2>Kunden hinzufügen</h2>
-            <form className="kunden-form" action={uploadData}>
+            <div className="kunden-eingabe-content">
+                <h2>Kunden hinzufügen</h2>
+                <form className="kunden-form" action={uploadData}>
 
-                <KundenInputs/>
-                <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
+                    <KundenInputs/>
+                    <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
 
-                <div className="button-group">
-                    <button className="add-schienenabschnitt-button" onClick={addRow} type="button">
-                        Neuen Abschnitt hinzufügen
-                    </button>
+                    <div className="button-group">
+                        <button className="add-schienenabschnitt-button" onClick={addRow} type="button">
+                            Neuen Abschnitt hinzufügen
+                        </button>
 
-                    <input type="submit" className="save-button" value="Hinzufügen"/>
-                </div>
+                        <input type="submit" className="save-button" value="Hinzufügen"/>
+                    </div>
 
-            </form>
+                </form>
+            </div>
         </div>
     )
 }

@@ -22,3 +22,7 @@ export async function post(endpoint, data) {
             body: JSON.stringify(data),
         })
 }
+
+export async function get(endpoint) {
+    return apiRequest(endpoint)
+}
