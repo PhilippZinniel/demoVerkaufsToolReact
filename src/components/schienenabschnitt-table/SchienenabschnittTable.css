@@ -1,6 +1,7 @@
 .schienenabschnitt-liste {
     width: 100%;
     border-collapse: collapse;
+    background-color: var(--color-table-cell-uneven);
 }
 
 .schienenabschnitt-liste th,
@@ -10,11 +11,11 @@
 }
 
 .schienenabschnitt-liste tr:nth-child(even) {
-    background-color: #2a2a2a;
+    background-color: var(--color-table-cell-even);
 }
 
 .schienenabschnitt-liste tbody tr:hover {
-    background-color: #3a3a3a;
+    background-color: var(--color-table-cell-hover);
 }
 
 .schienenabschnitt-table {
@@ -27,7 +28,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #1d1d1d;
+    background-color: var(--color-table-header-bg);
 }
 
 .table-input {

@@ -8,7 +8,7 @@
 .dashboard-table-list {
     width: 100%;
     border-collapse: collapse;
-    background-color: #2F2F2F;
+    background-color: var(--color-table-cell-uneven);
     overflow: hidden;
 }
 
@@ -16,7 +16,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #1d1d1d;
+    background-color: var(--color-table-header-bg);
 }
 
 .dashboard-table-list th,
@@ -26,20 +26,15 @@
 }
 
 .dashboard-table-list tr:nth-child(even) {
-    background-color: #2a2a2a;
+    background-color: var(--color-table-cell-even);
 }
 
 .dashboard-table-list tbody tr:hover {
-    background-color: #3a3a3a;
+    background-color: var(--color-table-cell-hover);
 }
 
 .dashboard-table-list th {
-    color: #bbb;
     font-weight: 600;
-}
-
-.dashboard-table-list td {
-    color: #ddd;
 }
 
 .table-action-button {
