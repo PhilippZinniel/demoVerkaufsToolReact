@@ -18,7 +18,7 @@
 }
 
 .schienenabschnitt-table {
-    max-height: 42vh;
+    height: 20vh;
     overflow-y: auto;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);

@@ -1,10 +1,13 @@
-export async function apiRequest(endpoint, options = {}) {
-    const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+export async function post(endpoint, data) {
     const res = await fetch(`${BASE_URL}${endpoint}/`, {
         headers: {
             "Content-Type": "application/json",
         },
-        ...options,
+        method: "POST",
+        body: JSON.stringify(data),
+
     });
 
     if (!res.ok) {
@@ -15,14 +18,8 @@ export async function apiRequest(endpoint, options = {}) {
     return res.json();
 }
 
-export async function post(endpoint, data) {
-    return apiRequest(endpoint,
-        {
-            method: "POST",
-            body: JSON.stringify(data),
-        })
-}
-
 export async function get(endpoint) {
-    return apiRequest(endpoint)
+    const response = await fetch(`http://localhost:8000/${endpoint}/`);
+    if (!response.ok) throw new Error('Failed to fetch');
+    return await response.json();
 }

@@ -29,99 +29,11 @@
     margin-bottom: 2rem;
 }
 
-.dashboard-card {
-    background-color: var(--color-card);
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    flex: 1;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: top left;
-}
-
-.dashboard-card:hover {
-    transform: scale(1.02);
-    box-shadow: -8px -8px 20px rgba(0, 123, 255, 0.2),
-    0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-text {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
-}
-
 .dashboard-table {
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     flex-grow: 1;
     background-color: var(--color-card);
     padding: 1rem 1.5rem;
-}
-
-.table-wrapper {
-    overflow-y: auto;
-    max-height: 45vh;
-}
-
-.dashboard-table-list {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #2F2F2F;
-    overflow: hidden;
-}
-
-.dashboard-table-list thead {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: #1d1d1d;
-}
-
-.dashboard-table-list th,
-.dashboard-table-list td {
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.dashboard-table-list tr:nth-child(even) {
-    background-color: #2a2a2a;
-}
-
-.dashboard-table-list tbody tr:hover {
-    background-color: #3a3a3a;
-}
-
-.dashboard-table-list th {
-    color: #bbb;
-    font-weight: 600;
-}
-
-.dashboard-table-list td {
-    color: #ddd;
-}
-
-.dashboard-table-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
-
-.table-action-button {
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-    border-radius: var(--border-radius);
-    background-color: transparent;
-    color: var(--color-text-primary);
-    border: none;
-    cursor: pointer;
-}
-
-.table-action-button:hover {
-    box-shadow: 0 0 6px rgba(0, 150, 255, 0.5);
 }
 
 .search-bar {
@@ -152,4 +64,12 @@
 
 .search-input::placeholder {
     color: #aaa;
+}
+
+.dashboard-table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
 }

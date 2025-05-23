@@ -1,0 +1,21 @@
+.dashboard-card {
+    background-color: var(--color-card);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: top left;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.02);
+    box-shadow: -8px -8px 20px rgba(0, 123, 255, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
