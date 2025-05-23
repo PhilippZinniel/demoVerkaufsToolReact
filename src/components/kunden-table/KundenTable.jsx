@@ -27,7 +27,7 @@ function KundenTable({entries, onAdd, onDetail}) {
                                 <td>{entry.adresse}</td>
                                 <td>{entry.schienenabschnitte.length}</td>
                                 <td className='button-cell'>
-                                    <button className="table-action-button" onClick={onDetail}>{'>'}</button>
+                                    <button className="table-action-button" onClick={() => onDetail(entry)}>{'>'}</button>
                                 </td>
                             </tr>)
                     }

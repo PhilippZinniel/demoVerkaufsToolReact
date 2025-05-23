@@ -3,8 +3,9 @@ import {useState} from "react";
 import KundenInputs from "../kunden-inputs/KundenInputs.jsx";
 import SchienenabschnittTable from "../schienenabschnitt-table/SchienenabschnittTable.jsx";
 import {post} from "../../utils/api.js";
+import BackButton from "../back-button/BackButton.jsx";
 
-function KundenForm() {
+function KundenForm({onBack}) {
     const [rows, setRows] = useState([
         {schienentyp: "", schienenhaerte: "", maximale_geschwindigkeit: "", laenge: ""}
     ]);
@@ -47,8 +48,9 @@ function KundenForm() {
     };
 
     return (
-        <div className="kunden-eingabe">
-            <div className="kunden-eingabe-content">
+        <div className="component">
+            <BackButton onBack={onBack}/>
+            <div className="component-content">
                 <h2>Kunden hinzufügen</h2>
                 <form className="kunden-form" action={uploadData}>
 
@@ -59,7 +61,7 @@ function KundenForm() {
 
                     <div className="schienenabschnitt-table-card">
                         <h3>Schienennetzwerk</h3>
-                        <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
+                        <SchienenabschnittTable abschnitte={rows} handleChange={handleChange} className="fixed-size"/>
 
                         <div className="button-group">
                             <button className="add-schienenabschnitt-button" onClick={addRow} type="button">

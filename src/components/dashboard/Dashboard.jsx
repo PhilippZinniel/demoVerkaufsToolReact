@@ -28,8 +28,8 @@ function Dashboard({onAdd, onDetail}) {
     })
 
     return (
-        <div className="dashboard">
-            <div className="dashboard-content">
+        <div className="component">
+            <div className="component-content">
                 <h2>Dashboard</h2>
                 <section className="dashboard-cards">
                     <Card header="Kunden"
@@ -50,7 +50,7 @@ function Dashboard({onAdd, onDetail}) {
                             <input type="text" placeholder="Suchen..." className="search-input"/>
                         </div>
                     </div>
-                    <KundenTable entries={kunden} onAdd={onAdd} onDetail={onDetail}/>
+                    <KundenTable entries={kunden} onAdd={onAdd} onDetail={(entry) => onDetail(entry)}/>
                 </section>
             </div>
         </div>

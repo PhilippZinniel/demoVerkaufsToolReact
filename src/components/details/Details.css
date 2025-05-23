@@ -1,0 +1,20 @@
+.info-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.schienenabschnitte {
+    border-radius: var(--border-radius);
+    background-color: var(--color-card);
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-height {
+    flex-grow: 1;
+}
