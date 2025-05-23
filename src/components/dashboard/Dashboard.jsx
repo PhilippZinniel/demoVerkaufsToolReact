@@ -8,6 +8,7 @@ function Dashboard({onAdd, onDetail}) {
     const [kunden, setKunden] = useState([]);
     const [schienenabschnitte, setSchienenabschnitte] = useState([])
     const [lastUpdate, setLastUpdate] = useState(new Date());
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         get('kunden')
@@ -26,6 +27,12 @@ function Dashboard({onAdd, onDetail}) {
             .then(response => setLastUpdate(response))
             .catch(error => console.error(error))
     })
+
+    const filteredKunden = kunden.filter((kunde) =>
+        [kunde.name, kunde.email].some(field =>
+            field.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    );
 
     return (
         <div className="component">
@@ -47,10 +54,12 @@ function Dashboard({onAdd, onDetail}) {
                     <div className="dashboard-table-header">
                         <h3>Einträge</h3>
                         <div className="search-bar">
-                            <input type="text" placeholder="Suchen..." className="search-input"/>
+                            <input type="text" placeholder="Suchen..." className="search-input"
+                                   value={searchQuery}
+                                   onChange={(e) => setSearchQuery(e.target.value)}/>
                         </div>
                     </div>
-                    <KundenTable entries={kunden} onAdd={onAdd} onDetail={(entry) => onDetail(entry)}/>
+                    <KundenTable entries={filteredKunden} onAdd={onAdd} onDetail={(entry) => onDetail(entry)}/>
                 </section>
             </div>
         </div>

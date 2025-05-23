@@ -16,12 +16,10 @@
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: #2F2F2F;
+    background-color: var(--color-surface);
     border-radius: var(--border-radius);
     padding: 6px 10px;
-    width: 100%;
     max-width: 300px;
-    box-shadow: 0 0 0 1px #444;
     transition: box-shadow 0.2s ease;
 }
 
