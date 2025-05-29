@@ -1,8 +1,8 @@
 import './SchienenabschnittTable.css'
 
-function SchienenabschnittTable({abschnitte, handleChange, className}) {
+function SchienenabschnittTable({abschnitte, handleChange}) {
     return (
-        <div className={`schienenabschnitt-table ${className}`}>
+        <div className="schienenabschnitt-table">
             <table className="schienenabschnitt-liste">
                 <thead>
                 <tr className="table-header">

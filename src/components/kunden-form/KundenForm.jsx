@@ -51,17 +51,17 @@ function KundenForm({onBack}) {
         <div className="component">
             <BackButton onBack={onBack}/>
             <div className="component-content">
-                <h2>Kunden hinzufügen</h2>
                 <form className="kunden-form" action={uploadData}>
+                    <h2>Kunden hinzufügen</h2>
 
-                    <div className="kunden-inputs-card">
+                    <section className="kunden-inputs-card">
                         <h3>Informationen</h3>
                         <KundenInputs/>
-                    </div>
+                    </section>
 
-                    <div className="schienenabschnitt-table-card">
+                    <section className="schienenabschnitt-table-card">
                         <h3>Schienennetzwerk</h3>
-                        <SchienenabschnittTable abschnitte={rows} handleChange={handleChange} className="fixed-size"/>
+                        <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
 
                         <div className="button-group">
                             <button className="add-schienenabschnitt-button" onClick={addRow} type="button">
@@ -70,7 +70,7 @@ function KundenForm({onBack}) {
 
                             <input type="submit" className="save-button" value="Hinzufügen"/>
                         </div>
-                    </div>
+                    </section>
 
                 </form>
             </div>

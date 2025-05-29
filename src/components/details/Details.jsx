@@ -17,9 +17,8 @@ function Details({kunde, onBack}) {
                 </section>
                 <section className="schienenabschnitte">
                     <h3>Schienennetzwerk</h3>
-                    <div className="table-height">
-                        <SchienenabschnittTable abschnitte={kunde.schienenabschnitte} className="flex-size"/>
-                    </div>
+                    <SchienenabschnittTable
+                        abschnitte={kunde.schienenabschnitte}/>
                 </section>
             </div>
         </div>

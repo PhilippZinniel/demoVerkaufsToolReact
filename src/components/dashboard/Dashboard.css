@@ -7,8 +7,12 @@
 }
 
 .dashboard-table {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+
     border-radius: var(--border-radius);
-    flex-grow: 1;
     background-color: var(--color-card);
     padding: 1rem 1.5rem;
 }

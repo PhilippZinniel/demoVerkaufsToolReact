@@ -11,22 +11,24 @@ function Dashboard({onAdd, onDetail}) {
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        get('kunden')
-            .then(response => setKunden(response))
-            .catch(error => console.error(error))
+        const fetchData = () => {
+            get('kunden')
+                .then(response => setKunden(response))
+                .catch(error => console.error(error))
+
+            get('schienenabschnitte')
+                .then(response => setSchienenabschnitte(response))
+                .catch(error => console.error(error))
+
+            get('letzte-aenderung')
+                .then(response => setLastUpdate(new Date(response.letzte_aenderung)))
+                .catch(error => console.error(error))
+        }
+
+        fetchData();
+        const interval = setInterval(fetchData, 10000);
+        return () => clearInterval(interval);
     }, []);
-
-    useEffect(() => {
-        get('schienenabschnitte')
-            .then(response => setSchienenabschnitte(response))
-            .catch(error => console.error(error))
-    }, [])
-
-    useEffect(() => {
-        get('letzte_aenderung')
-            .then(response => setLastUpdate(response))
-            .catch(error => console.error(error))
-    })
 
     const filteredKunden = kunden.filter((kunde) =>
         [kunde.name, kunde.email].some(field =>
