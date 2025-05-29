@@ -11,7 +11,7 @@ function Card({header, content}) {
     return (
         <div className="card">
             <h3>{header}</h3>
-            <p className="card-text">{content}</p>
+            <p className="card-text">{(content && content.trim() !== '') ? content : 'nicht eingetragen'}</p>
         </div>
     )
 }

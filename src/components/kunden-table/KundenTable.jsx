@@ -10,6 +10,18 @@ import './KundenTable.css'
  * @param {Function} onDetail - Callback triggered when a detail button is clicked, receives the selected entry.
  */
 function KundenTable({entries, onAdd, onDetail}) {
+    /**
+     * Returns the given value if it is a non-empty string (after trimming),
+     * or the value itself if not a string and truthy.
+     * Otherwise, returns 'N/A' as a fallback.
+     *
+     * @param {string|any} value The value to display.
+     * @return {string|any} The original value or 'N/A' if empty or falsy.
+     */
+    const displayOrNA = (value) => {
+        return value && value.trim() !== '' ? value : 'N/A';
+    };
+
     return (
         <>
             <div className="table-wrapper">
@@ -31,12 +43,13 @@ function KundenTable({entries, onAdd, onDetail}) {
                         entries.map((entry, index) =>
                             <tr key={index}>
                                 <td>{entry.name}</td>
-                                <td>{entry.email}</td>
-                                <td>{entry.telefon}</td>
-                                <td>{entry.adresse}</td>
+                                <td>{displayOrNA(entry.email)}</td>
+                                <td>{displayOrNA(entry.telefon)}</td>
+                                <td>{displayOrNA(entry.adresse)}</td>
                                 <td>{entry.schienenabschnitte.length}</td>
                                 <td className='button-cell'>
-                                    <button className="table-action-button" onClick={() => onDetail(entry)}>{'>'}</button>
+                                    <button className="table-action-button"
+                                            onClick={() => onDetail(entry)}>{'>'}</button>
                                 </td>
                             </tr>)
                     }
