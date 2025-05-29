@@ -5,12 +5,20 @@ import SchienenabschnittTable from "../schienenabschnitt-table/Schienenabschnitt
 import {post} from "../../utils/api.js";
 import BackButton from "../back-button/BackButton.jsx";
 
+/**
+ * KundenForm component
+ *
+ * @description provides a form interface to add a new customer (Kunde)
+ * along with multiple railway network sections (Schienenabschnitte).
+ *
+ * @param {Function} onBack - Callback to navigate back from the form.
+ */
 function KundenForm({onBack}) {
     const [rows, setRows] = useState([
         {schienentyp: "", schienenhaerte: "", maximale_geschwindigkeit: "", laenge: ""}
     ]);
 
-
+    // Upload customer and railway sections data via POST requests
     async function uploadData(formData) {
         try {
             const kunde = await post('kunden', {
@@ -21,13 +29,19 @@ function KundenForm({onBack}) {
             });
             console.log("Kunde erfolgreich gespeichert...");
 
-            rows.forEach(row => {
+            // Filter out rows where all fields are empty or falsy
+            const filteredRows = rows.filter(row => {
+                return Object.values(row).some(value => value && value.toString().trim() !== "");
+            });
+
+            filteredRows.forEach(row => {
                 post('schienenabschnitte', {...row, kunde: kunde.id})
                     .then(() => console.log("Schienenabschnitt erfolgreich gespeichert..."));
             })
         } catch (error) {
             console.error("Fehler beim Speichern: ", error.message);
         } finally {
+            // Reset rows after submission
             setRows([
                 {schienentyp: "", schienenhaerte: "", maximale_geschwindigkeit: "", laenge: ""}
             ]);
@@ -35,10 +49,12 @@ function KundenForm({onBack}) {
 
     }
 
+    // Add a new empty row for railway sections
     const addRow = () => {
         setRows(prev => [...prev, {schienentyp: "", schienenhaerte: "", maximale_geschwindigkeit: "", laenge: ""}]);
     };
 
+    // Update specific field value of a row by index
     const handleChange = (index, field, value) => {
         setRows(prev => {
             const updated = [...prev];

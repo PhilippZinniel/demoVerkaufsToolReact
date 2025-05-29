@@ -1,3 +1,6 @@
+/* index.css */
+/* variables & shared / general styling  */
+
 :root {
     --color-bg: #242424;
     --color-surface: #2F2F2F;
@@ -54,6 +57,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Generic reusable component container */
 .component {
     display: flex;
     flex-direction: column;
@@ -72,6 +76,7 @@
     position: relative;
 }
 
+/* Inner content container for components */
 .component-content {
     padding: 3%;
     width: calc(100% - 6%);
@@ -89,6 +94,7 @@
     border-radius: var(--border-radius);
 }
 
+/* Table layout and color scheme */
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -96,20 +102,24 @@
     overflow: hidden;
 }
 
+/* Table cell styles */
 .table th,
 .table td {
     padding: 0.5rem;
     text-align: left;
 }
 
+/* Alternating row background */
 .table tr:nth-child(even) {
     background-color: var(--color-table-cell-even);
 }
 
+/* Hover effect on table rows */
 .table tbody tr:hover {
     background-color: var(--color-table-cell-hover);
 }
 
+/* Sticky header row */
 .table thead th {
     position: sticky;
     top: 0;
@@ -117,6 +127,7 @@
     background-color: var(--color-table-header-bg);
 }
 
+/* Container for responsive table layout */
 .table-container {
     display: flex;
     flex-direction: column;

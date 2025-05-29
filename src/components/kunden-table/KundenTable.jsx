@@ -1,5 +1,14 @@
 import './KundenTable.css'
 
+/**
+ * KundenTable component
+ *
+ * @description displays customer entries with options to add new customers or view details.
+ *
+ * @param {Object[]} entries - Array of customer objects to display in the table.
+ * @param {Function} onAdd - Callback triggered when the add button is clicked.
+ * @param {Function} onDetail - Callback triggered when a detail button is clicked, receives the selected entry.
+ */
 function KundenTable({entries, onAdd, onDetail}) {
     return (
         <>

@@ -1,3 +1,5 @@
+/* Dashboard.css */
+/* Layout and styling for the dashboard component */
 .dashboard-cards {
     display: flex;
     flex-direction: row;
@@ -16,6 +18,7 @@
     transition: box-shadow 0.2s ease;
 }
 
+/* Highlight bar when input is focused */
 .search-bar:focus-within {
     box-shadow: var(--box-shadow-hover);
 }

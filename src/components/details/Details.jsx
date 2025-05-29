@@ -3,6 +3,17 @@ import Card from "../card/Card.jsx";
 import SchienenabschnittTable from "../schienenabschnitt-table/SchienenabschnittTable.jsx";
 import BackButton from "../back-button/BackButton.jsx";
 
+/**
+ * Details component
+ *
+ * @description displays detailed information about a single customer (kunde).
+ *
+ * Shows contact info, address, last update timestamp,
+ * and a table of related railway network sections (schienenabschnitte).
+ *
+ * @param {Object} kunde - The customer data object containing details and related railway sections.
+ * @param {Function} onBack - Callback function to handle back navigation.
+ */
 function Details({kunde, onBack}) {
     return (
         <div className="component">

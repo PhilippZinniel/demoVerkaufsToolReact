@@ -1,5 +1,12 @@
 import './SchienenabschnittTable.css'
 
+/**
+ * SchienenabschnittTable component
+ * @description displays a table of rail segments with editable inputs for each property.
+ *
+ * @param {Object[]} abschnitte - Array of rail segment objects.
+ * @param {Function} handleChange - Callback fired when an input value changes; receives (index, field, value).
+ */
 function SchienenabschnittTable({abschnitte, handleChange}) {
     return (
         <div className="table-wrapper">

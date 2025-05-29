@@ -1,3 +1,5 @@
+/* Details.css */
+/* Layout for customer info cards and spacing */
 .info-cards{
     display: flex;
     flex-direction: row;

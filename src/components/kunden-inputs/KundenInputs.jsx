@@ -1,5 +1,10 @@
 import './KundenInputs.css'
 
+/**
+ * KundenInputs component
+ *
+ * @description renders input fields for customer data including name, email, phone, and address.
+ */
 function KundenInputs() {
     return (
         <div className="kunden-inputs">

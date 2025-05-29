@@ -1,3 +1,5 @@
+/* KundenInputs.css */
+/* Styles for the KundenInputs component */
 .kunden-inputs {
     display: flex;
     flex-direction: row;
@@ -30,6 +32,7 @@
     outline: none;
 }
 
+/* Floating label style: absolutely positioned over input, with smooth transitions */
 .input-label {
     position: absolute;
     left: 10px;
