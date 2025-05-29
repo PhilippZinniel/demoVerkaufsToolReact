@@ -64,7 +64,7 @@ function KundenForm({onBack}) {
                         <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
 
                         <div className="button-group">
-                            <button className="add-schienenabschnitt-button" onClick={addRow} type="button">
+                            <button className="add-button" onClick={addRow} type="button">
                                 Neuen Abschnitt hinzufügen
                             </button>
 
