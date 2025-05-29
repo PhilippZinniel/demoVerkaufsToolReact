@@ -21,7 +21,7 @@
     color: var(--color-text-secondary);
     height: 2.5rem;
     padding-left: 10px;
-    font-size: 1rem;
+    font-size: var(--font-size-medium);
     transition: border-color 0.3s;
 }
 
@@ -34,7 +34,7 @@
     position: absolute;
     left: 10px;
     top: 0.75rem;
-    font-size: 1rem;
+    font-size: var(--font-size-medium);
     color: var(--color-text-secondary);
     background-color: var(--color-surface);
     padding: 0 4px;
@@ -50,7 +50,7 @@
 /* Hide label when input is empty and not focused */
 .input-field:placeholder-shown + .input-label {
     transform: none;
-    font-size: 1rem;
+    font-size: var(--font-size-medium);
     top: 0.75rem;
 }
 
@@ -58,7 +58,7 @@
 .input-field:focus + .input-label,
 .input-field:not(:placeholder-shown) + .input-label {
     top: -0.5rem;
-    font-size: 0.75rem;
+    font-size: var(--font-size-small);
     transform: translateY(-25%);
     color: var(--color-accent-primary);
 }

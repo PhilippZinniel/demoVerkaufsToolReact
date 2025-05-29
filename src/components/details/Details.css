@@ -5,14 +5,3 @@
     gap: 2rem;
     margin-bottom: 2rem;
 }
-
-.schienenabschnitte {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: auto;
-
-    border-radius: var(--border-radius);
-    background-color: var(--color-card);
-    padding: 1rem 1.5rem;
-}

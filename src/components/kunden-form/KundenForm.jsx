@@ -59,7 +59,7 @@ function KundenForm({onBack}) {
                         <KundenInputs/>
                     </section>
 
-                    <section className="schienenabschnitt-table-card">
+                    <section className="table-container">
                         <h3>Schienennetzwerk</h3>
                         <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
 

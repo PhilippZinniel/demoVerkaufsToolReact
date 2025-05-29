@@ -15,7 +15,7 @@ function Details({kunde, onBack}) {
                     <Card header="Adresse" content={kunde.adresse.replace(',', '\n')}/>
                     <Card header="Zuletzt bearbeitet" content={new Date(kunde.updated_at).toLocaleString()}/>
                 </section>
-                <section className="schienenabschnitte">
+                <section className="table-container">
                     <h3>Schienennetzwerk</h3>
                     <SchienenabschnittTable
                         abschnitte={kunde.schienenabschnitte}/>

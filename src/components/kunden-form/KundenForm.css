@@ -6,21 +6,10 @@
     gap: 1rem;
 }
 
-.schienenabschnitt-table-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: auto;
-
-    border-radius: var(--border-radius);
-    background-color: var(--color-card);
-    padding: 1rem 1.5rem;
-}
-
 .kunden-inputs-card {
     border-radius: var(--border-radius);
     background-color: var(--color-card);
-    padding: 1rem 1.5rem;
+    padding: var(--padding-card);
 }
 
 .button-group {
@@ -34,7 +23,7 @@
     font-size: 1rem;
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);
-    padding: 4px 8px;
+    padding: var(--padding-button-small);
     outline: none;
     background-color: var(--color-surface);
     cursor: pointer;

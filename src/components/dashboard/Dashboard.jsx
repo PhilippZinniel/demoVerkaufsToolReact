@@ -52,7 +52,7 @@ function Dashboard({onAdd, onDetail}) {
                     <Card header="Letzte Änderung" content={lastUpdate.toLocaleString()}/>
                 </section>
 
-                <section className="dashboard-table">
+                <section className="table-container">
                     <div className="dashboard-table-header">
                         <h3>Einträge</h3>
                         <div className="search-bar">

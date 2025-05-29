@@ -1,38 +1,3 @@
-.schienenabschnitt-liste {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--color-table-cell-uneven);
-    overflow: hidden;
-}
-
-.schienenabschnitt-liste th,
-.schienenabschnitt-liste td {
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.schienenabschnitt-liste tr:nth-child(even) {
-    background-color: var(--color-table-cell-even);
-}
-
-.schienenabschnitt-liste tbody tr:hover {
-    background-color: var(--color-table-cell-hover);
-}
-
-.schienenabschnitt-table {
-    flex: 1;
-    overflow-y: auto;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-}
-
-.table-header th {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: var(--color-table-header-bg);
-}
-
 .table-input {
     width: calc(100% - 1.5rem);
     background-color: rgba(var(--basic-element-background-color), 0.05); /* very light background */
@@ -42,7 +7,7 @@
     padding: 0.5rem;
     margin-left: 0.25rem;
     transition: all 0.2s ease;
-    font-size: 0.9rem;
+    font-size: var(--font-size-medium);
 }
 
 .table-input:hover {

@@ -4,7 +4,7 @@ function KundenTable({entries, onAdd, onDetail}) {
     return (
         <>
             <div className="table-wrapper">
-                <table className="dashboard-table-list">
+                <table className="table">
                     <thead>
                     <tr>
                         <th>Kunde</th>
@@ -12,9 +12,9 @@ function KundenTable({entries, onAdd, onDetail}) {
                         <th>Telefon</th>
                         <th>Adresse</th>
                         <th>Schienennetz</th>
-                        <td className='button-cell'>
+                        <th className='button-cell'>
                             <button className="table-action-button" onClick={onAdd}>+</button>
-                        </td>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>

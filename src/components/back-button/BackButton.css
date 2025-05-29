@@ -2,7 +2,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1rem;
+    font-size: var(--font-size-medium);
     cursor: pointer;
     color: var(--color-text-secondary);
     background-color: transparent;
@@ -11,9 +11,9 @@
     z-index: 1;
     font-weight: bold;
     border-radius: var(--border-radius);
-    padding: 4px 8px;
+    padding: var(--padding-button-small);
 }
 
 .back-button:hover {
-    box-shadow: 0 0 6px rgba(0, 150, 255, 0.5);
+    box-shadow: var(--box-shadow-hover);
 }
