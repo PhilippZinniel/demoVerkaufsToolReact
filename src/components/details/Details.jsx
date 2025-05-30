@@ -19,7 +19,7 @@ function Details({kunde, onBack}) {
         <div className="component">
             <BackButton onBack={onBack}/>
             <div className="component-content">
-                <h2>{kunde.name}</h2>
+                <h1>{kunde.name}</h1>
 
                 <section className="info-cards">
                     <Card header="Kontakt Informationen" content={`${kunde.email} \n ${kunde.telefon}`}/>
@@ -27,7 +27,7 @@ function Details({kunde, onBack}) {
                     <Card header="Zuletzt bearbeitet" content={new Date(kunde.updated_at).toLocaleString()}/>
                 </section>
                 <section className="table-container">
-                    <h3>Schienennetzwerk</h3>
+                    <h2>Schienennetzwerk</h2>
                     <SchienenabschnittTable
                         abschnitte={kunde.schienenabschnitte}/>
                 </section>

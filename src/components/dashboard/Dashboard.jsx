@@ -52,7 +52,7 @@ function Dashboard({onAdd, onDetail}) {
     return (
         <div className="component">
             <div className="component-content">
-                <h2>Dashboard</h2>
+                <h1>Dashboard</h1>
                 <section className="dashboard-cards">
                     <Card header="Kunden"
                           content={(kunden.length !== 1)
@@ -67,7 +67,7 @@ function Dashboard({onAdd, onDetail}) {
 
                 <section className="table-container">
                     <div className="dashboard-table-header">
-                        <h3>Einträge</h3>
+                        <h2>Einträge</h2>
                         <div className="search-bar">
                             <input type="text" placeholder="Suchen..." className="search-input"
                                    value={searchQuery}

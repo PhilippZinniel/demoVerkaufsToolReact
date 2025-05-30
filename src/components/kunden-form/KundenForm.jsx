@@ -73,15 +73,15 @@ function KundenForm({onBack}) {
             <BackButton onBack={onBack}/>
             <div className="component-content">
                 <form className="kunden-form" action={uploadData}>
-                    <h2>Kunden hinzufügen</h2>
+                    <h1>Kunden hinzufügen</h1>
 
                     <section className="kunden-inputs-card">
-                        <h3>Informationen</h3>
+                        <h2>Informationen</h2>
                         <KundenInputs/>
                     </section>
 
                     <section className="table-container">
-                        <h3>Schienennetzwerk</h3>
+                        <h2>Schienennetzwerk</h2>
                         <SchienenabschnittTable abschnitte={rows} handleChange={handleChange}/>
 
                         <div className="button-group">

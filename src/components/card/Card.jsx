@@ -4,13 +4,13 @@ import './Card.css'
  * Card component
  *
  * @description displays a styled card with a header and content text.
- * @param {string} header - Title text displayed in an <h3> tag
- * @param {string} content - Main content displayed in a <p> tag
+ * @param {string} header - Title text
+ * @param {string} content - Main content
  */
 function Card({header, content}) {
     return (
         <div className="card">
-            <h3>{header}</h3>
+            <h2>{header}</h2>
             <p className="card-text">{(content && content.trim() !== '') ? content : 'nicht eingetragen'}</p>
         </div>
     )
