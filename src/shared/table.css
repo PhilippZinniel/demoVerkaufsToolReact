@@ -34,6 +34,7 @@
 }
 
 @media (max-height: 500px) {
+    /* makes header non sticky for smaller screens */
     .table thead th {
         position: relative;
         top: 0;
@@ -112,6 +113,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 40%; /* should match padding-left minus left offset */
+        max-width: 40%;
     }
 }
