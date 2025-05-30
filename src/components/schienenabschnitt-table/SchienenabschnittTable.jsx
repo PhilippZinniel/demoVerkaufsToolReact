@@ -1,4 +1,5 @@
 import './SchienenabschnittTable.css'
+import '../../shared/table.css'
 
 /**
  * SchienenabschnittTable component
@@ -22,22 +23,22 @@ function SchienenabschnittTable({abschnitte, handleChange}) {
                 <tbody>
                 {abschnitte.map((abschnitt, index) =>
                     <tr key={index}>
-                        <td>
+                        <td data-label="Schienentyp">
                             <input className="table-input" type="text"
                                    value={abschnitt.schienentyp}
                                    onChange={(e) => handleChange(index, 'schienentyp', e.target.value)}/>
                         </td>
-                        <td>
+                        <td data-label="Schienenhärte">
                             <input className="table-input" type="number"
                                    value={abschnitt.schienenhaerte}
                                    onChange={(e) => handleChange(index, 'schienenhaerte', e.target.value)}/>
                         </td>
-                        <td>
+                        <td data-label="Max. Geschwindigkeit">
                             <input className="table-input" type="number"
                                    value={abschnitt.maximale_geschwindigkeit}
                                    onChange={(e) => handleChange(index, 'maximale_geschwindigkeit', e.target.value)}/>
                         </td>
-                        <td>
+                        <td data-label="Länge">
                             <input className="table-input" type="number"
                                    value={abschnitt.laenge}
                                    onChange={(e) => handleChange(index, 'laenge', e.target.value)}/>

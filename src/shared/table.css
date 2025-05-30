@@ -1,0 +1,116 @@
+/* Table layout and color scheme */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-table-cell-uneven);
+    overflow: hidden;
+}
+
+/* Table cell styles */
+.table th,
+.table td {
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Alternating row background */
+.table tr:nth-child(even) {
+    background-color: var(--color-table-cell-even);
+}
+
+/* Hover effect on table rows */
+.table tbody tr:hover {
+    background-color: var(--color-table-cell-hover);
+}
+
+/* Sticky header row */
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-table-header-bg);
+}
+
+/* Container for responsive table layout */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+
+    border-radius: var(--border-radius);
+    background-color: var(--color-card);
+    padding: 1rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .table-container {
+        position: relative;
+    }
+
+    .button-cell {
+        border-radius: 20px;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    th .table-action-button {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    td .table-action-button {
+        margin-left: 0.5rem;
+    }
+
+    .table th {
+        background-color: transparent;
+    }
+
+    .table thead {
+        width: fit-content;
+        z-index: 10;
+        position: absolute;
+        right: 3rem;
+        background-color: transparent;
+    }
+
+    .table,
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+        display: block;
+    }
+
+    .table {
+        background-color: var(--color-card);
+    }
+
+    .table thead th:not(.button-cell) {
+        display: none;
+    }
+
+    .table tr {
+        margin-bottom: 0.5rem;
+        background-color: var(--color-table-cell-uneven);
+        border-radius: var(--border-radius);
+    }
+
+    .table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}

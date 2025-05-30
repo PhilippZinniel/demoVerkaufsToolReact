@@ -1,4 +1,5 @@
 import './KundenTable.css'
+import '../../shared/table.css'
 
 /**
  * KundenTable component
@@ -42,11 +43,11 @@ function KundenTable({entries, onAdd, onDetail}) {
                     {
                         entries.map((entry, index) =>
                             <tr key={index}>
-                                <td>{entry.name}</td>
-                                <td>{displayOrNA(entry.email)}</td>
-                                <td>{displayOrNA(entry.telefon)}</td>
-                                <td>{displayOrNA(entry.adresse)}</td>
-                                <td>{entry.schienenabschnitte.length}</td>
+                                <td data-label="Name">{entry.name}</td>
+                                <td data-label="E-Mail">{displayOrNA(entry.email)}</td>
+                                <td data-label="Telefon">{displayOrNA(entry.telefon)}</td>
+                                <td data-label="Adresse">{displayOrNA(entry.adresse)}</td>
+                                <td data-label="Schienenabschnitte">{entry.schienenabschnitte.length}</td>
                                 <td className='button-cell'>
                                     <button className="table-action-button"
                                             onClick={() => onDetail(entry)}>{'>'}</button>
