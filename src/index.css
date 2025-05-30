@@ -28,6 +28,7 @@
     --font-size-medium: 1rem;
     --font-size-large: 1.6rem;
 
+    --padding-component: 1rem 1.5rem;
     --padding-card: 1rem 1.5rem;
     --padding-button-small: 4px 8px;
     --padding-input: 0.5rem 0.75rem;
@@ -40,6 +41,20 @@
     --transition-medium: 0.3s ease;
 
     --border-radius: 12px;
+}
+
+@media (max-width: 600px), (max-height: 500px) {
+    :root {
+        /* Smaller values for small screens */
+        --font-size-small: 0.7rem;
+        --font-size-medium: 0.9rem;
+        --font-size-large: 1.2rem;
+
+        --padding-component: 0.5rem 0.75rem;
+        --padding-card: 0.75rem 1rem;
+        --padding-button-small: 3px 6px;
+        --padding-input: 0.4rem 0.6rem;
+    }
 }
 
 :root {
@@ -71,14 +86,14 @@
 
     box-shadow: var(--box-shadow);
     background-color: var(--color-surface);
-    margin: 5%;
+    margin: 3%;
 
     position: relative;
 }
 
 /* Inner content container for components */
 .component-content {
-    padding: 3%;
+    padding: var(--padding-component);
     width: calc(100% - 6%);
     height: calc(100% - 3%);
     display: flex;
@@ -92,6 +107,20 @@
     overflow-y: auto;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
+    min-height: 5rem;
+}
+
+/* Container for responsive table layout */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    min-height: 200px;
+
+    border-radius: var(--border-radius);
+    background-color: var(--color-card);
+    padding: 1rem 1.5rem;
 }
 
 body {

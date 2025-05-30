@@ -12,6 +12,8 @@
     border-radius: var(--border-radius);
     background-color: var(--color-card);
     padding: var(--padding-card);
+    overflow-y: auto;
+    min-height: 250px;
 }
 
 .button-group {
@@ -29,6 +31,7 @@
     outline: none;
     background-color: var(--color-surface);
     cursor: pointer;
+    margin-right: 1rem;
 }
 
 .save-button {

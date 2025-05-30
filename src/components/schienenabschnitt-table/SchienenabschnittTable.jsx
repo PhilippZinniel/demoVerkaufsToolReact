@@ -16,7 +16,7 @@ function SchienenabschnittTable({abschnitte, handleChange}) {
                 <tr className="table-header">
                     <th>Schienentyp</th>
                     <th>Schienenhärte</th>
-                    <th>Maximale Geschwindigkeit</th>
+                    <th>Max. Geschwindigkeit</th>
                     <th>Länge</th>
                 </tr>
                 </thead>
@@ -33,7 +33,7 @@ function SchienenabschnittTable({abschnitte, handleChange}) {
                                    value={abschnitt.schienenhaerte}
                                    onChange={(e) => handleChange(index, 'schienenhaerte', e.target.value)}/>
                         </td>
-                        <td data-label="Max. Geschwindigkeit">
+                        <td data-label="Max. Geschw.">
                             <input className="table-input" type="number"
                                    value={abschnitt.maximale_geschwindigkeit}
                                    onChange={(e) => handleChange(index, 'maximale_geschwindigkeit', e.target.value)}/>
