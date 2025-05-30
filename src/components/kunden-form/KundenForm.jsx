@@ -20,8 +20,9 @@ function KundenForm({onBack}) {
 
     // Upload customer and railway sections data via POST requests
     async function uploadData(formData) {
-        // return if no value is set
-        if(Object.keys(formData).length === 0){
+        // return if the name is empty
+        if(formData.get('name').trim() === ""){
+            console.log("Name ist leer!");
             return;
         }
 

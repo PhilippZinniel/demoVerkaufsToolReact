@@ -12,7 +12,7 @@ const BASE_URL = import.meta.env.VITE_API_URL;
  * @returns {Promise<Object>} Parsed JSON response.
  */
 export async function post(endpoint, data) {
-    const res = await fetch(`${BASE_URL}${endpoint}/`, {
+    const res = await fetch(`${BASE_URL}/${endpoint}/`, {
         headers: {
             "Content-Type": "application/json",
         },
@@ -36,7 +36,7 @@ export async function post(endpoint, data) {
  * @returns {Promise<Object>} Parsed JSON response.
  */
 export async function get(endpoint) {
-    const response = await fetch(`http://localhost:8000/${endpoint}/`);
+    const response = await fetch(`${BASE_URL}/${endpoint}/`);
     if (!response.ok) throw new Error('Failed to fetch');
     return await response.json();
 }

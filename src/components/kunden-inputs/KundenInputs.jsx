@@ -9,7 +9,7 @@ function KundenInputs() {
     return (
         <div className="kunden-inputs">
             <div className="input-group input-full">
-                <input className="input-field" id="name" name="name" type="text" placeholder="Name" />
+                <input className="input-field" id="name" name="name" type="text" placeholder="Name" required aria-required="true"/>
                 <label className="input-label" htmlFor="name">Name</label>
             </div>
 
