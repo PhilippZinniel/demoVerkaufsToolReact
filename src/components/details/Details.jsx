@@ -22,8 +22,8 @@ function Details({kunde, onBack}) {
                 <h1>{kunde.name}</h1>
 
                 <section className="info-cards">
-                    <Card header="Kontakt Informationen" content={`${kunde.email} \n ${kunde.telefon}`}/>
-                    <Card header="Adresse" content={kunde.adresse.replace(',', '\n')}/>
+                    <Card header="Kontakt Informationen" content={`${kunde.email || 'E-Mail nicht eingetragen'} \n ${kunde.telefon || 'Nummer nicht eingetragen'}`}/>
+                    <Card header="Adresse" content={kunde.adresse.replaceAll(',', '\n')}/>
                     <Card header="Zuletzt bearbeitet" content={new Date(kunde.updated_at).toLocaleString()}/>
                 </section>
                 <section className="table-container">
