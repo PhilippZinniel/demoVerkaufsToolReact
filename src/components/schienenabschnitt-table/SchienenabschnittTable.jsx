@@ -9,6 +9,12 @@ import '../../shared/table.css'
  * @param {Function} handleChange - Callback fired when an input value changes; receives (index, field, value).
  */
 function SchienenabschnittTable({abschnitte, handleChange}) {
+    /**
+     * @description checks if a row (Schienenabschnitt) has a set value
+     *
+     * @param {Object} row - Object to check for set value
+     * @returns {boolean} - returns whether a value is set or not
+     */
     const rowContainsValue = (row) => {return Object.values(row).some(value => value !== '')}
 
     return (

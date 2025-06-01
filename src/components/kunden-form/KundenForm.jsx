@@ -20,13 +20,14 @@ function KundenForm({onBack}) {
 
     // Upload customer and railway sections data via POST requests
     async function uploadData(formData) {
-        // return if the name is empty
+        // Return if the name is empty
         if(formData.get('name').trim() === ""){
             console.log("Name ist leer!");
             return;
         }
 
         try {
+            // Posts new customer
             const kunde = await post('kunden', {
                 name: formData.get('name'),
                 email: formData.get('email'),
@@ -40,6 +41,7 @@ function KundenForm({onBack}) {
                 return Object.values(row).some(value => value && value.toString().trim() !== "");
             });
 
+            // Posts all Schienenabschnitte with all values set
             filteredRows.forEach(row => {
                 post('schienenabschnitte', {...row, kunde: kunde.id})
                     .then(() => console.log("Schienenabschnitt erfolgreich gespeichert..."));
