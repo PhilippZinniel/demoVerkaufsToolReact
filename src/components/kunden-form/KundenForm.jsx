@@ -44,6 +44,8 @@ function KundenForm({onBack}) {
                 post('schienenabschnitte', {...row, kunde: kunde.id})
                     .then(() => console.log("Schienenabschnitt erfolgreich gespeichert..."));
             })
+
+            onBack();
         } catch (error) {
             console.error("Fehler beim Speichern: ", error.message);
         } finally {
